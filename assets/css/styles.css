@@ -147,7 +147,7 @@ header a:hover::after {
   height: 100px;
   width: 100%;
   margin-bottom: 20px;
-  background-image: url(/assets/images/lotus.jpg);
+  background-image: url(../../assets/images/lotus.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -223,9 +223,7 @@ header a:hover::after {
   height: 2px;
 }
 
-.box {
-    
-}
+
 
 @media screen and (max-width: 940px) {
     header {
