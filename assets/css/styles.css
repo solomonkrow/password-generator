@@ -1,0 +1,351 @@
+:root {
+  --font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  --borderColor: #14303a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    
+  font-family: var(--font);
+  background-image: linear-gradient(to bottom right, white, #e3edf1, #60737a);
+  color: white;
+}
+
+header {
+  padding: 10px;
+  font-family: var(--font);
+  background-color: #60737a;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  align-items: center;
+  font-size: 48px;
+  color: white;
+}
+
+header nav {
+  font-family: var(--font);
+  font-size: 20px;
+  display: flex;
+}
+
+nav ul {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0;
+  max-width: 600px;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 30px;
+  position: relative;
+}
+
+nav a {
+  padding: 20px;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+  justify-content: center;
+}
+
+main {
+  border-radius: 15px;
+  padding: 40px;
+  background-color: var(--borderColor);
+  width: 30rem;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 10em;
+}
+
+main h1,
+h2 {
+  justify-content: center;
+  display: flex;
+  padding: 20px;
+}
+
+main p {
+  text-align: center;
+  color: rgb(189, 187, 187);
+  margin: 10px 0;
+}
+
+.pw-box {
+    display: flex;
+  background-color: whitesmoke;
+  border-radius: 9px;
+  height: 50px;
+  color: black;
+  padding: 0px 15px;
+  border: 2px solid rgb(233, 61, 90);
+  align-items: center;
+  justify-content: center;
+  
+}
+
+main div {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.buttons button {
+  width: 180px;
+  background-image: linear-gradient(goldenrod, rgb(233, 61, 90));
+  padding: 15px 20px;
+  border-radius: 9px;
+  font-size: 18px;
+  font-family: var(--font);
+}
+
+header a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+header a:hover::after {
+  width: 100%;
+  left: 0px;
+}
+
+.lotus {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 20px;
+  background-image: url(/assets/images/lotus.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.right {
+  color: gold;
+  width: 300px;
+  padding: 10px;
+  margin-right: 20px;
+  font-size: 14px;
+  font-style: italic;
+  font-family: var(--font);
+}
+
+.lotus span {
+  color: white;
+}
+
+.rangeSlider {
+  position: relative;
+  width: 100%;
+  height: calc(65px - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(red, green, blue);
+  border-radius: 8px;
+  
+}
+
+.rangeSlider::before,
+.rangeSlider::after {
+  position: absolute;
+}
+
+.rangeSlider::before {
+  content: attr(data-min);
+  left: 10px;
+}
+
+.rangeSlider::after {
+  content: attr(data-max);
+  right: 10px;
+}
+.lengthTitle {
+  position: absolute;
+  top: -10px;
+  left: 50px;
+  font-size: 1rem;
+  pointer-events: none;
+  user-select: none;
+  transform: translateY(-50%);
+  
+}
+.lengthTitle::after {
+  content: attr(data-length);
+  position: absolute;
+  right: -16px;
+  font-variant-numeric: tabular-nums;
+}
+
+#slider {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background: rgba(233, 61, 90, 0.314);
+  width: calc(100% - (60px + 10px));
+  height: 2px;
+}
+
+.box {
+    
+}
+
+@media screen and (max-width: 940px) {
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px 0 0 0;
+      justify-content: center;
+    }
+  
+    header h1 {
+      font-size: 40px;
+      padding-bottom: 20px;
+    }
+  
+    header nav ul {
+      flex-direction: row;
+      padding: 15px;
+    }
+  
+    header nav {
+      background-color: var(--borderColor);
+      width: 100%;
+      height: 100px;
+      margin: 0;
+    }
+  
+    .lotus {
+      height: 400px;
+    }
+  
+    .right {
+      display: block;
+      color: gold;
+      width: 250px;
+      padding: 10px;
+      font-size: 14px;
+      position: absolute;
+      right: 100px;
+      top: 500px;
+      font-style: italic;
+      font-family: var(--font);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    main {
+      width: 20rem;
+    }
+  
+    .buttons button {
+      width: 120px;
+    }
+  
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px 0 0 0;
+      justify-content: center;
+    }
+  
+    header h1 {
+      font-size: 40px;
+      padding-bottom: 20px;
+    }
+  
+    header nav {
+      display: flex;
+      background-color: var(--borderColor);
+      width: 100%;
+      height: 200px;
+      margin: 0;
+      padding: 20px;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .lotus {
+      height: 400px;
+      display: flex;
+    }
+  
+    .right {
+      display: block;
+      color: gold;
+      width: 250px;
+      padding: 10px;
+      font-size: 14px;
+      position: absolute;
+      right: 100px;
+      top: 600px;
+      font-style: italic;
+      font-family: var(--font);
+    }
+  
+    header a {
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      padding: 10px;
+    }
+
+    .pw-box {
+        font-size: small;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    main {
+      width: 17rem;
+    }
+  
+    .buttons button {
+      width: 100px;
+      font-size: 15px;
+      padding: 10px 6px;
+    }
+  }
+
+

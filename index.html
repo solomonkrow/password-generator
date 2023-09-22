@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Josiah Thomas</h1>
+      <nav>
+        <ul>
+          <li><a href="https://solomonkrow.github.io/portfolio/">Home</a></li>
+          <li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="lotus">
+      <p class="right">
+        “Live life in its totality. And living in the world, don’t be of it.
+        Live in the world like a lotus flower in water: it lives in water, but
+        the water touches it not.”
+        <span>– Osho</span>
+      </p>
+    </section>
+
+    <main>
+      <h1>Password Generator</h1>
+      <h2>Generate A Password</h2>
+
+      <section class="pw-box">
+        <password id="result" placeholder="Your secure password"></password>
+      </section>
+
+      <br />
+      <p>Set password length</p>
+      <br />
+
+      <section class="rangeSlider" data-min="8" data-max="32">
+        <div class="lengthTitle" data-length="8">Length :</div>
+        <input
+          id="slider"
+          type="range"
+          min="8"
+          max="32"
+          value="8"
+        />
+      </section>
+
+      <br />
+      <p id="select">Select at least one of the boxes</p>
+      <br />
+
+      <section class="box">
+        <label for="symbol">Include Symbols :</label>
+        <input type="checkbox" id="symbols" checked />
+      </section>
+
+      <section class="box">
+        <label for="number">Include Numbers :</label>
+        <input type="checkbox" id="numbers" checked />
+      </section>
+
+      <section class="box">
+        <label for="lowerCase">Include Lower Case :</label>
+        <input type="checkbox" id="lowerCase" checked />
+      </section>
+
+      <section class="box">
+        <label for="upperCase">Include Upper Case :</label>
+        <input type="checkbox" id="upperCase" checked />
+      </section>
+
+      <section class="buttons">
+        <button onclick="generatePassword()">Generate</button>
+        <button onclick="copyPassword()">Copy</button>
+      </section>
+    </main>
+
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
