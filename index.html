@@ -12,11 +12,11 @@
       <nav>
         <ul>
           <li><a href="https://solomonkrow.github.io/portfolio/">Home</a></li>
-          <li>
+          <li></li>
         </ul>
       </nav>
     </header>
-
+    <!-- lotus imagery and quote -->
     <section class="lotus">
       <p class="right">
         “Live life in its totality. And living in the world, don’t be of it.
@@ -30,32 +30,32 @@
       <h1>Password Generator</h1>
       <h2>Generate A Password</h2>
 
+      <!-- box where password appears -->
       <section class="pw-box">
-        <password id="result" placeholder="Your secure password"></password>
+        <password id="result"></password>
       </section>
 
       <br />
       <p>Set password length</p>
       <br />
 
+      <!-- Slider, can change min and max and starting value -->
       <section class="rangeSlider" data-min="8" data-max="32">
         <div class="lengthTitle" data-length="8">Length :</div>
-        <input
-          id="slider"
-          type="range"
-          min="8"
-          max="32"
-          value="8"
-        />
+        <input id="slider" type="range" min="8" max="32" value="8" />
       </section>
 
+      <!-- checkboxes -->
       <br />
       <p id="select">Select at least one of the boxes</p>
       <br />
-
       <section class="box">
-        <label for="symbols">Include Symbols :</label>
-        <input type="checkbox" id="symbols" checked />
+        <label for="upperCase">Include Upper Case :</label>
+        <input type="checkbox" id="upperCase" checked />
+      </section>
+      <section class="box">
+        <label for="lowerCase">Include Lower Case :</label>
+        <input type="checkbox" id="lowerCase" checked />
       </section>
 
       <section class="box">
@@ -64,16 +64,12 @@
       </section>
 
       <section class="box">
-        <label for="lowerCase">Include Lower Case :</label>
-        <input type="checkbox" id="lowerCase" checked />
-      </section>
-
-      <section class="box">
-        <label for="upperCase">Include Upper Case :</label>
-        <input type="checkbox" id="upperCase" checked />
+        <label for="symbols">Include Symbols :</label>
+        <input type="checkbox" id="symbols" checked />
       </section>
 
       <section class="buttons">
+        <!-- Buttons and functions that start them -->
         <button onclick="generatePassword()">Generate</button>
         <button onclick="copyPassword()">Copy</button>
       </section>
